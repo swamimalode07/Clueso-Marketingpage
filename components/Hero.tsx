@@ -1,35 +1,44 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+import { hero } from "@/content/hero";
 
 const Hero = () => {
+  const {
+    eyebrow,
+    title,
+    subtitle,
+    primaryAction,
+    secondaryAction,
+    illustration,
+  } = hero;
+
   return (
-    <section className="mx-auto w-full max-w-340 px-5 py-16 lg:py-24">
+    <Section>
       <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
         <div>
           <p className="text-[15px] font-medium uppercase leading-[1.5] tracking-[0.06em] text-brand">
-            AI Video generation platform
+            {eyebrow}
           </p>
 
           <h1 className="mt-[22px] font-heading text-[44px] font-medium leading-[1.18] tracking-[-0.02em] text-ink lg:text-[58px]">
-            The agentic video creation platform for all teams in your company.
+            {title}
           </h1>
 
           <p className="mt-[26px] max-w-140 text-[21px] leading-[1.65] text-muted">
-            Clueso automates video production for sales, marketing, product, and
-            training teams. All your teams get all their videos with one AI
-            platform.
+            {subtitle}
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Button
-              title="Get started for free"
-              href="/signup"
+              title={primaryAction.label}
+              href={primaryAction.href}
               variant="primary"
               size="lg"
             />
             <Button
-              title="Book a demo"
-              href="/demo"
+              title={secondaryAction.label}
+              href={secondaryAction.href}
               variant="secondary"
               size="lg"
             />
@@ -38,16 +47,16 @@ const Hero = () => {
 
         <div>
           <Image
-            src="/assets/svg/Hero.svg"
-            alt="Clueso turning a single prompt into product and dev team update videos"
-            width={688}
-            height={569}
+            src={illustration.src}
+            alt={illustration.alt}
+            width={illustration.width}
+            height={illustration.height}
             className="mx-auto h-auto w-full max-w-145"
             preload
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
