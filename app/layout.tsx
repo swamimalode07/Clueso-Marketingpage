@@ -36,7 +36,7 @@ const nohemi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Clueso — The agentic video creation platform",
+  title: "Clueso — AI video creation for every team",
   description:
     "Clueso automates video production for sales, marketing, product, and training teams. All your teams get all their videos with one AI platform.",
 };

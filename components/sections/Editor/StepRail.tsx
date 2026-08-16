@@ -1,3 +1,4 @@
+import ScrollFade from "@/components/ui/ScrollFade";
 import { agentTasks } from "@/content/editorDemo";
 import { CheckIcon } from "./editorIcons";
 
@@ -19,7 +20,8 @@ const fillWidth = (
 };
 
 const StepRail = ({ completed, progress, finished }: StepRailProps) => (
-  <ol className="flex gap-3 overflow-x-auto pb-px [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-5 [&::-webkit-scrollbar]:hidden">
+  <ScrollFade>
+    <ol className="flex gap-3 pb-px sm:gap-5">
     {agentTasks.map((task, index) => {
       const isDone = finished || index < completed;
       const isActive = !finished && index === completed;
@@ -59,7 +61,8 @@ const StepRail = ({ completed, progress, finished }: StepRailProps) => (
         </li>
       );
     })}
-  </ol>
+    </ol>
+  </ScrollFade>
 );
 
 export default StepRail;

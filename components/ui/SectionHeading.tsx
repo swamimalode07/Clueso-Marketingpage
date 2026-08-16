@@ -25,19 +25,19 @@ const SectionHeading = ({
             <span className="flex size-5 shrink-0 [&>svg]:size-full">{icon}</span>
           )}
           {label && (
-            <span className="text-[18px] font-medium leading-[1.5] tracking-[-0.01em]">
+            <span className="text-[15px] font-medium leading-[1.5] tracking-[-0.01em] lg:text-[18px]">
               {label}
             </span>
           )}
         </div>
       )}
 
-      <h2 className="mt-4 font-heading text-[44px] font-medium leading-[1.18] tracking-[-0.02em] text-ink lg:text-[58px]">
+      <h2 className="mt-4 font-heading text-[32px] font-medium leading-[1.18] tracking-[-0.02em] text-ink lg:text-[58px]">
         {title}
       </h2>
 
       {subtitle && (
-        <p className="mt-5 text-[21px] leading-[1.65] text-muted">{subtitle}</p>
+        <p className="mt-5 text-[17px] leading-[1.65] text-muted lg:text-[21px]">{subtitle}</p>
       )}
     </div>
   );

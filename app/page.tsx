@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main className="pt-22">
+      <main className="pt-18 lg:pt-22">
         <Hero />
         <UseCases />
         <EditorSection />

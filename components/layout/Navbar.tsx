@@ -17,7 +17,7 @@ const Chevron = () => (
 
 const Navbar = () => (
   <header className="fixed top-0 left-0 right-0 z-50 bg-white">
-    <Container className="flex h-22 items-center justify-between">
+    <Container className="flex h-18 items-center justify-between lg:h-22">
       <Link href="/" className="shrink-0">
         <Image
           src="/assets/Clueso-logo.svg"
@@ -40,6 +40,17 @@ const Navbar = () => (
           </Link>
         ))}
       </nav>
+
+      <button
+        type="button"
+        aria-label="Open menu"
+        className="grid size-11 shrink-0 place-items-center rounded-lg border border-hairline transition-colors hover:bg-neutral-50 lg:hidden"
+      >
+        <span className="flex w-[18px] flex-col gap-[5px]" aria-hidden="true">
+          <span className="h-0.5 w-full rounded-full bg-ink" />
+          <span className="h-0.5 w-full rounded-full bg-ink" />
+        </span>
+      </button>
 
       <div className="hidden items-center gap-4 lg:flex">
         <Button

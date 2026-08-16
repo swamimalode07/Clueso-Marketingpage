@@ -52,7 +52,7 @@ const UseCaseTabs = ({ items, activeIndex, onSelect }: UseCaseTabsProps) => {
             aria-controls={`panel-${item.id}`}
             tabIndex={isActive ? 0 : -1}
             onClick={() => onSelect(index)}
-            className={`flex cursor-pointer items-center gap-3 rounded-xl border px-5 py-4 text-left text-[19px] font-medium tracking-[-0.01em] transition-colors ${
+            className={`flex cursor-pointer items-center gap-2.5 rounded-xl border px-4 py-3 text-left text-[15px] font-medium tracking-[-0.01em] transition-colors lg:gap-3 lg:px-5 lg:py-4 lg:text-[19px] ${
               isActive
                 ? "border-hairline bg-neutral-50 text-ink"
                 : "border-transparent text-muted hover:bg-neutral-50 hover:text-ink"
