@@ -5,12 +5,14 @@ const variants = {
   secondary: "bg-white text-brand border border-brand hover:bg-brand/5",
   dark: "bg-ink text-white hover:bg-black",
   outline: "bg-transparent text-ink border border-hairline hover:bg-neutral-50",
+  outlineBrand:
+    "bg-transparent text-brand border border-brand hover:bg-brand/10",
 };
 
 const sizes = {
   sm: "px-4 py-2.5 text-[14px] rounded-md",
   md: "px-5 py-3 text-[15px] rounded-md",
-  lg: "px-6 py-3.5 text-[17px] rounded-lg",
+  lg: "px-6 py-3 text-[17px] rounded-lg",
 };
 
 type ButtonProps = {

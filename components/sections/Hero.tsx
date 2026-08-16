@@ -16,20 +16,20 @@ const Hero = () => {
   return (
     <Section>
       <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
-        <div>
+        <div className="lg:-mt-16">
           <p className="text-[15px] font-medium uppercase leading-[1.5] tracking-[0.06em] text-brand">
             {eyebrow}
           </p>
 
-          <h1 className="mt-[22px] font-heading text-[44px] font-medium leading-[1.18] tracking-[-0.02em] text-ink lg:text-[58px]">
+          <h1 className="mt-[22px] font-heading text-[40px] font-medium leading-[1.18] tracking-[-0.02em] text-ink lg:text-[52px]">
             {title}
           </h1>
 
-          <p className="mt-[26px] max-w-140 text-[21px] leading-[1.65] text-muted">
+          <p className="mt-5 max-w-140 text-[19px] leading-[1.65] text-muted">
             {subtitle}
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-[30px] flex flex-wrap items-center gap-3">
             <Button
               title={primaryAction.label}
               href={primaryAction.href}
