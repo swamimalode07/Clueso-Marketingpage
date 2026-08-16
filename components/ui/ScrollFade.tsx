@@ -2,17 +2,24 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
 const FADE = "48px";
 
 type ScrollFadeProps = {
   children: ReactNode;
+  activeIndex?: number;
   className?: string;
 };
 
-const ScrollFade = ({ children, className = "" }: ScrollFadeProps) => {
+const ScrollFade = ({
+  children,
+  activeIndex,
+  className = "",
+}: ScrollFadeProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: false, end: false });
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
     const element = ref.current;
@@ -35,6 +42,20 @@ const ScrollFade = ({ children, className = "" }: ScrollFadeProps) => {
       observer.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || activeIndex === undefined) return;
+
+    const items = element.querySelectorAll<HTMLElement>("[data-scroll-item]");
+    const item = items[activeIndex];
+    if (!item) return;
+
+    element.scrollTo({
+      left: item.offsetLeft - (element.clientWidth - item.clientWidth) / 2,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  }, [activeIndex, prefersReducedMotion]);
 
   const maskImage = `linear-gradient(to right, ${
     edges.start ? `transparent 0, black ${FADE}` : "black 0"

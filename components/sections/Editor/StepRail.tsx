@@ -20,7 +20,7 @@ const fillWidth = (
 };
 
 const StepRail = ({ completed, progress, finished }: StepRailProps) => (
-  <ScrollFade>
+  <ScrollFade activeIndex={Math.min(completed, agentTasks.length - 1)}>
     <ol className="flex gap-3 pb-px sm:gap-5">
     {agentTasks.map((task, index) => {
       const isDone = finished || index < completed;
@@ -29,6 +29,7 @@ const StepRail = ({ completed, progress, finished }: StepRailProps) => (
       return (
         <li
           key={task.id}
+          data-scroll-item
           className="flex shrink-0 grow basis-auto flex-col items-center"
         >
           <span className="flex items-center gap-1.5">
@@ -48,6 +49,7 @@ const StepRail = ({ completed, progress, finished }: StepRailProps) => (
             >
               {task.step}
             </span>
+            <span className="size-3.5 shrink-0" aria-hidden="true" />
           </span>
 
           <span className="mt-3.5 h-[3px] w-full overflow-hidden rounded-full bg-neutral-200">
