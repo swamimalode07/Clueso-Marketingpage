@@ -6,3 +6,4 @@ export { default as GraduationCapIcon } from "./GraduationCapIcon";
 export { default as ClipboardIcon } from "./ClipboardIcon";
 export { default as UsersIcon } from "./UsersIcon";
 export { default as HeadsetIcon } from "./HeadsetIcon";
+export { default as SparklesIcon } from "./SparklesIcon";

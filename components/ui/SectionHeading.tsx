@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   label?: string;
   title: ReactNode;
   subtitle?: string;
+  maxWidth?: string;
   className?: string;
 };
 
@@ -13,10 +14,11 @@ const SectionHeading = ({
   label,
   title,
   subtitle,
+  maxWidth = "max-w-200",
   className = "",
 }: SectionHeadingProps) => {
   return (
-    <div className={`max-w-200 ${className}`}>
+    <div className={`${maxWidth} ${className}`}>
       {(icon || label) && (
         <div className="flex items-center gap-2 text-brand">
           {icon && (
