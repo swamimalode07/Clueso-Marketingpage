@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import UseCases from "@/components/UseCases";
-import EditorSection from "@/components/EditorSection";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import UseCases from "@/components/sections/UseCases";
+import EditorSection from "@/components/sections/Editor";
 
 export default function Home() {
   return (

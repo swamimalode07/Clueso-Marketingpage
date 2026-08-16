@@ -1,6 +1,7 @@
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { SparklesIcon } from "@/components/icons";
+import EditorDemo from "./EditorDemo";
 import { editorHeading } from "@/content/editor";
 
 const EditorSection = () => (
@@ -12,6 +13,10 @@ const EditorSection = () => (
       subtitle={editorHeading.subtitle}
       maxWidth="max-w-280"
     />
+
+    <div className="mt-12">
+      <EditorDemo />
+    </div>
   </Section>
 );
 
