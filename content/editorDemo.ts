@@ -1,26 +1,45 @@
 export type AgentTask = {
   id: string;
   label: string;
+  step: string;
   working: string;
 };
 
 export const agentTasks: AgentTask[] = [
-  { id: "captions", label: "Add captions", working: "Adding captions" },
-  { id: "pauses", label: "Remove pauses", working: "Removing pauses" },
+  {
+    id: "captions",
+    label: "Add captions",
+    step: "Adding captions",
+    working: "Adding captions",
+  },
+  {
+    id: "pauses",
+    label: "Remove pauses",
+    step: "Removing pauses",
+    working: "Removing pauses",
+  },
   {
     id: "translate",
     label: "Translate to Spanish",
+    step: "Translating a video",
     working: "Translating to Spanish",
   },
-  { id: "brand", label: "Apply brand style", working: "Applying brand style" },
+  {
+    id: "brand",
+    label: "Apply brand style",
+    step: "Applying brand styles",
+    working: "Applying brand style",
+  },
   {
     id: "document",
     label: "Create step-by-step document",
+    step: "Creating a step-by-step document",
     working: "Creating the step-by-step document",
   },
   {
     id: "effects",
     label: "Add animations, zooms & more",
+    step: "Adding animations & zooms",
     working: "Working on animations and callouts",
   },
 ];
